@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import cx from "classnames"
-import Remarkable from "remarkable"
+import { Remarkable } from "remarkable"
 import { OAS3ComponentWrapFactory } from "../helpers"
 import { sanitizer } from "core/components/providers/markdown"
 
@@ -13,7 +13,7 @@ export const Markdown = ({ source, className = "" }) => {
   if(typeof source !== "string") {
     return null
   }
-  
+
   if ( source ) {
     const html = parser.render(source)
     const sanitized = sanitizer(html)
