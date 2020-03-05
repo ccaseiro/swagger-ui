@@ -21,3 +21,7 @@ global.navigator = {
 }
 copyProps(win, window) // use UI's built-in window wrapper
 copyProps(window, global)
+
+require("enzyme").configure({
+  adapter: new (require("enzyme-adapter-react-16"))(),
+})
