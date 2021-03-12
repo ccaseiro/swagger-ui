@@ -2,6 +2,7 @@
 */
 !README.md
 !package.json
+!/run-if-top-level.js
 !dist/swagger-ui.js
 !dist/swagger-ui.js.map
 !dist/swagger-ui-standalone-preset.js

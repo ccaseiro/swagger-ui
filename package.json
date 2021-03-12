@@ -14,6 +14,7 @@
   ],
   "license": "Apache-2.0",
   "scripts": {
+    "preinstall": "node run-if-top-level npx npm-force-resolutions",
     "automated-release": "release-it --config ./release/.release-it.json",
     "build": "run-p --aggregate-output build-core build-bundle build-standalone",
     "build-bundle": "webpack --config webpack-dist-bundle.config.js --colors",
@@ -55,13 +56,13 @@
     "core-js": "^2.5.1",
     "css.escape": "1.5.1",
     "deep-extend": "0.5.1",
-    "dompurify": "^2.0.8",
+    "dompurify": "^2.2.7",
     "ieee754": "^1.1.8",
     "immutable": "^3.x.x",
     "js-file-download": "^0.4.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "memoizee": "^0.4.12",
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.7.2",
     "react": "^15.6.2",
     "react-addons-perf": "^15.4.0",
     "react-dom": "^15.6.2",
@@ -75,7 +76,7 @@
     "remarkable": "^2.0.0",
     "reselect": "^2.5.4",
     "serialize-error": "^2.1.0",
-    "swagger-client": "^3.9.0",
+    "swagger-client": "^3.13.1",
     "url-parse": "^1.4.3",
     "xml-but-prettier": "^1.0.1",
     "zenscroll": "^4.0.2"
@@ -96,7 +97,7 @@
     "babel-preset-stage-0": "^6.22.0",
     "babel-runtime": "^6.23.0",
     "body-parser": "^1.18.3",
-    "bundlesize": "^0.17.2",
+    "bundlesize": "^0.18.1",
     "chromedriver": "^2.38.3",
     "copy-webpack-plugin": "^4.0.1",
     "cors": "^2.8.4",
@@ -114,7 +115,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "git-describe": "^4.0.1",
-    "http-server": "^0.12.1",
+    "http-server": "^0.12.3",
     "imports-loader": "^0.8.0",
     "jsdom": "^11.10.0",
     "json-loader": "^0.5.7",
@@ -125,6 +126,7 @@
     "mocha": "^5.1.1",
     "nightwatch": "^0.9.16",
     "node-sass": "^4.13.1",
+    "npm-force-resolutions": "0.0.10",
     "npm-run-all": "^4.1.2",
     "null-loader": "0.1.1",
     "nyc": "^11.3.0",
@@ -169,5 +171,9 @@
       "maxSize": "1 MB",
       "compression": "none"
     }
-  ]
+  ],
+  "resolutions": {
+    "isomorphic-fetch": "^3.0.0",
+    "**/isomorphic-fetch": "isomorphic-fetch@^3.0.0"
+  }
 }
